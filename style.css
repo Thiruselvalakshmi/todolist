@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Copperplate Gothic Light;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(139deg, #4690cccb 0%, #580479b6 90%);
+}
+.container {
+  position: relative;
+  max-width: 800px;
+  padding: 10px;
+  margin: 0 auto;
+}
+.container .insert {
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+}
+.insert .ip {
+  width: 90%;
+  color: whitesmoke;
+  border: none;
+  background: none;
+  padding: 10px;
+  font-size: 20px;
+  border-bottom: 2px solid #666;
+  outline: none;
+}
+.insert button {
+  margin: 0 10px;
+  background: black;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10%;
+  cursor: pointer;
+}
+.ncom,
+.com {
+  margin: 5px 0;
+  padding: 20px;
+}
+.ncom,
+.com h2 {
+  text-align: center;
+  color: white;
+}
+ol {
+  list-style: none;
+}
+ol li {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background: rgb(189, 81, 81);
+  border-radius: 15px;
+  font-size: 20px;
+}
+ol.com li {
+  background: rgb(104, 209, 104);
+}
+ol li::before {
+  background: #231381;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 2px;
+  text-align: center;
+  color: white;
+}
+li button {
+  float: right;
+  padding: 8px;
+  font-size: 28px;
+  line-height: 25px;
+  margin-right: 18px;
+  background: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  border: none;
+  outline: none;
+}

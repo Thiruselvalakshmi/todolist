@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="insert">
+        <input class="ip" type="text" placeholder="Add to list" />
+        <button>ADD</button>
+      </div>
+      <ol class="ncom">
+        <h2>YOUR TASKS TO BE COMPLETED</h2>
+      </ol>
+      <ol class="com">
+        <h2>YOUR COMPLETED TASKS</h2>
+      </ol>
+    </div>
+    <script>
+      const input = document.querySelector("input");
+      const btn = document.querySelector(".insert > button");
+      btn.addEventListener("click", addItem);
+      input.addEventListener("keyup", (e) => {
+        e.keycode === 13 ? addItem(e) : null;
+      });
+      function addItem(e) {
+        const nc = document.querySelector(".ncom");
+        const c = document.querySelector(".com");
+        const n = document.createElement("li");
+        const bcheck = document.createElement("button");
+        const bdel = document.createElement("button");
+
+        bcheck.innerHTML = '<i class="fa fa-check"></i>';
+        bdel.innerHTML = '<i class="fa fa-trash"></i>';
+        if (input.value !== "") {
+          n.textContent = input.value;
+          input.value = "";
+          nc.appendChild(n);
+          n.appendChild(bcheck);
+          n.appendChild(bdel);
+        }
+
+        bcheck.addEventListener("click", function () {
+          const parent = this.parentNode;
+          parent.remove;
+          c.appendChild(parent);
+          bcheck.style.display = "none";
+        });
+        bdel.addEventListener("click", function () {
+          const parent = this.parentNode;
+          parent.remove();
+        });
+      }
+    </script>
+  </body>
+</html>
